@@ -1,2 +1,3 @@
-# teamname-generator
+# Teamname Generator
+
 Javascript team name generator.
