@@ -1,0 +1,11 @@
+# Site settings
+title: "Teamname Generator"
+email: "hi@dereknutile.com"
+description: "Javascript team name generator."
+baseurl: ""
+url: "http://teamname-generator.github.io"
+# twitter_username: jekyllrb
+# github_username:  jekyll
+
+# Build settings
+markdown: kramdown
