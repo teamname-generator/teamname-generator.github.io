@@ -1,0 +1,19 @@
+{
+  "name": "teamname-generator.github.io",
+  "version": "1.0.0",
+  "description": "Javascript team name generator.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teamname-generator/teamname-generator.github.io.git"
+  },
+  "author": "Derek Nutile <dereknutile@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/teamname-generator/teamname-generator.github.io/issues"
+  },
+  "homepage": "https://github.com/teamname-generator/teamname-generator.github.io#readme"
+}
