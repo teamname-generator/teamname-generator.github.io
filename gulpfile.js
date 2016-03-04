@@ -18,6 +18,7 @@ gulp.task('lint', function() {
 gulp.task('sass', function() {
     return gulp.src('public/assets/scss/*.scss')
         .pipe(sass())
+        // .pipe(sass({outputStyle: 'compressed'}))
         .pipe(gulp.dest('public/assets/css'));
 });
 
