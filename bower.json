@@ -1,22 +1,21 @@
 {
   "name": "teamname-generator",
-  "version": "0.1.0",
-  "homepage": "https://github.com/teamname-generator/",
+  "homepage": "https://github.com/dereknutile/teamname-generator",
   "authors": [
-    "Derek Nutile <hi@dereknutile.com>"
+    "Derek Nutile <dereknutile@gmail.com>"
   ],
-  "description": "Javascript team name generator.",
+  "description": "Simple generator using Vuejs",
+  "main": "",
   "license": "MIT",
-  "private": true,
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
+    "public/assets/vendor",
     "test",
     "tests"
   ],
   "dependencies": {
-    "jquery": "~2.1.4",
-    "pure": "purecss#~0.6.0"
+    "vue": "~2.0.0"
   }
 }
