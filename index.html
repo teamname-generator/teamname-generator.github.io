@@ -10,14 +10,29 @@
 <body>
 
     <div id="app">
-        {{ message }}
+        <h1>{{ message }}</h1>
+        <h3>{{ mathRandom }}</h3>
+        <button @click="setRandomMessage">Randomize</button>
     </div>
 
     <script>
         var app = new Vue({
             el: '#app',
             data: {
-                message: 'Hello Vue!'
+                message: 'Hello Vue!',
+                mathRandom: 0
+            },
+            methods: {
+                setRandomMessage: function () {
+                    var x = Math.random()
+                    if( x > 0.5 )
+                    {
+                        this.message = "odd";
+                    } else {
+                        this.message = "even";
+                    }
+                    this.mathRandom = x;
+                }
             }
         })
     </script>
