@@ -11,26 +11,31 @@
 
     <div id="app">
         <h1>{{ message }}</h1>
+        <team v-for="team in teams" v-bind:team="team"></team>
         <h3>{{ mathRandom }}</h3>
-        <button @click="setRandomMessage">Randomize</button>
+        <button @click="setRandomNumber">Randomize</button>
     </div>
 
     <script>
+        Vue.component('team', {
+            props: ['team'],
+            template: '<p>{{ team }}</p>'
+        })
+
         var app = new Vue({
             el: '#app',
             data: {
-                message: 'Hello Vue!',
+                message: 'Teamname Generator!',
+                teams: [
+                    'Team name #1',
+                    'Team name #2',
+                    'Team name #3',
+                ],
                 mathRandom: 0
             },
             methods: {
-                setRandomMessage: function () {
+                setRandomNumber: function () {
                     var x = Math.random()
-                    if( x > 0.5 )
-                    {
-                        this.message = "odd";
-                    } else {
-                        this.message = "even";
-                    }
                     this.mathRandom = x;
                 }
             }
