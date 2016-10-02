@@ -11,9 +11,12 @@
 
     <div id="app">
         <h1>{{ message }}</h1>
+        <h2>Teams ({{ teams.length }})</h2>
         <team v-for="team in teams" v-bind:team="team"></team>
         <h3>Seed: {{ randomSeed }}</h3>
         <button @click="setSeeder">Randomize Seed</button>
+        <h3>Name: {{ randomName }}</h3>
+        <button @click="chooseRandomTeam">Randomize Name</button>
     </div>
 
     <script>
@@ -31,12 +34,16 @@
                     'Team name #2',
                     'Team name #3',
                 ],
-                randomSeed: 0
+                randomSeed: 0,
+                randomName: "Random Name"
             },
             methods: {
                 setSeeder: function () {
                     var seed = Math.random()
                     this.randomSeed = seed;
+                },
+                chooseRandomTeam: function () {
+                    this.randomName = this.teams[Math.floor(Math.random()*this.teams.length)];
                 }
             }
         })
