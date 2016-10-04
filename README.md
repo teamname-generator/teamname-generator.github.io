@@ -25,3 +25,7 @@ See the installation notes on the [VueJS Dev Tools Repository](https://github.co
 This is a simple script that runs directly in the browser.  You need to point your browser to the file like this:
 
 [file:///path/to/teamname-generator/index.html](file:///path/to/teamname-generator/index.html).
+
+### Name Components
+
+See: [names.md](names.md).
