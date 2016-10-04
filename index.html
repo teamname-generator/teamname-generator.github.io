@@ -21,22 +21,43 @@
             data: {
                 message: 'Teamname Generator',
                 firstNames: [
-                    'Super',
-                    'Awesome',
-                    'Wicked',
+                    'Ancient',
+                    'Angry',
+                    'Annoying',
+                    'Artificial',
+                    'Atomic',
+                    'Awful',
+                    'Bad',
+                    'Beige',
                 ],
                 secondNames: [
-                    'Wombats',
-                    'Tigers',
-                    'Lizards',
+                    'Bacon',
+                    'Ball',
+                    'Ballz',
+                    'Bayside',
+                    'Bean',
+                    'Beat',
+                    'Bedtime',
                 ],
-                randomName: "Random Name"
+                thirdNames: [
+                    'Afrostars',
+                    'Aftermath',
+                    'Aggies',
+                    'Anacondas',
+                    'Apocalypse',
+                    'Armageddon',
+                    'Assassins',
+                    'Attackers',
+                ],
+                randomName: "Random Team Name"
             },
             methods: {
                 chooseRandomTeam: function () {
                 this.randomName = this.firstNames[Math.floor(Math.random()*this.firstNames.length)] +
                 " " +
-                this.secondNames[Math.floor(Math.random()*this.secondNames.length)];
+                this.secondNames[Math.floor(Math.random()*this.secondNames.length)] +
+                " " +
+                this.thirdNames[Math.floor(Math.random()*this.thirdNames.length)];
                 }
             }
         })
