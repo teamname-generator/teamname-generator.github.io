@@ -11,39 +11,32 @@
 
     <div id="app">
         <h1>{{ message }}</h1>
-        <h2>Teams ({{ teams.length }})</h2>
-        <team v-for="team in teams" v-bind:team="team"></team>
-        <h3>Seed: {{ randomSeed }}</h3>
-        <button @click="setSeeder">Randomize Seed</button>
-        <h3>Name: {{ randomName }}</h3>
+        <h3>{{ randomName }}</h3>
         <button @click="chooseRandomTeam">Randomize Name</button>
     </div>
 
     <script>
-        Vue.component('team', {
-            props: ['team'],
-            template: '<p>{{ team }}</p>'
-        })
-
         var app = new Vue({
             el: '#app',
             data: {
-                message: 'Teamname Generator!',
-                teams: [
-                    'Team name #1',
-                    'Team name #2',
-                    'Team name #3',
+                message: 'Teamname Generator',
+                firstNames: [
+                    'Super',
+                    'Awesome',
+                    'Wicked',
                 ],
-                randomSeed: 0,
+                secondNames: [
+                    'Wombats',
+                    'Tigers',
+                    'Lizards',
+                ],
                 randomName: "Random Name"
             },
             methods: {
-                setSeeder: function () {
-                    var seed = Math.random()
-                    this.randomSeed = seed;
-                },
                 chooseRandomTeam: function () {
-                    this.randomName = this.teams[Math.floor(Math.random()*this.teams.length)];
+                this.randomName = this.firstNames[Math.floor(Math.random()*this.firstNames.length)] +
+                " " +
+                this.secondNames[Math.floor(Math.random()*this.secondNames.length)];
                 }
             }
         })
