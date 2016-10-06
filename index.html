@@ -16,48 +16,39 @@
     </div>
 
     <script>
+        var apiURL = 'https://raw.githubusercontent.com/dereknutile/teamname-generator/master/teams.json';
         var app = new Vue({
             el: '#app',
             data: {
                 message: 'Teamname Generator',
-                firstNames: [
-                    'Ancient',
-                    'Angry',
-                    'Annoying',
-                    'Artificial',
-                    'Atomic',
-                    'Awful',
-                    'Bad',
-                    'Beige',
-                ],
-                secondNames: [
-                    'Bacon',
-                    'Ball',
-                    'Ballz',
-                    'Bayside',
-                    'Bean',
-                    'Beat',
-                    'Bedtime',
-                ],
-                thirdNames: [
-                    'Afrostars',
-                    'Aftermath',
-                    'Aggies',
-                    'Anacondas',
-                    'Apocalypse',
-                    'Armageddon',
-                    'Assassins',
-                    'Attackers',
-                ],
+                teamNames: [], // get from remote json
                 randomName: "Random Team Name"
             },
+
+            created: function () {
+                this.fetchData();
+            },
+
+            watch: {
+                // currentBranch: 'fetchData'
+            },
+
             methods: {
+                fetchData: function () {
+                    var xhr = new XMLHttpRequest();
+                    var self = this;
+                    xhr.open( 'GET', apiURL )
+                    xhr.onload = function () {
+                        self.teamNames = JSON.parse( xhr.responseText );
+                    }
+                    xhr.send();
+                },
                 chooseRandomTeam: function () {
-                this.randomName = this.firstNames[Math.floor(Math.random()*this.firstNames.length)] +
+                this.randomName = this.teamNames.firstNames[Math.floor(Math.random()*this.teamNames.firstNames.length)] +
                 " " +
-                this.secondNames[Math.floor(Math.random()*this.secondNames.length)] +
+                this.teamNames.secondNames[Math.floor(Math.random()*this.teamNames.secondNames.length)] +
                 " " +
-                this.thirdNames[Math.floor(Math.random()*this.thirdNames.length)];
+                this.teamNames.thirdNames[Math.floor(Math.random()*this.teamNames.thirdNames.length)];
                 }
             }
         })
