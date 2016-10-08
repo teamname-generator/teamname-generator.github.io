@@ -4,23 +4,44 @@
     <meta charset="UTF-8">
     <title>Teamname Generator</title>
 
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/vendor/fontawesome/css/font-awesome.css">
     <script src="assets/vendor/vue/dist/vue.js" charset="utf-8"></script>
 </head>
 
 <body>
-
-    <div id="app">
-        <h1>{{ message }}</h1>
-        <h3>{{ randomName }}</h3>
-        <button @click="chooseRandomTeam">Randomize Name</button>
+<section class="hero is-medium is-dark is-bold">
+  <div class="hero-body">
+        <div class="container">
+            <div id="app" class="content has-text-centered">
+                <h1 class="title is-2">{{ randomName }}</h1>
+                <button @click="chooseRandomTeam" class="button">Randomize Name</button>
+            </div>
+        </div>
     </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="content has-text-centered">
+            <p>
+                <strong>Teamname Generator</strong> by <a href="http://dereknutile.com/">Derek Nutile</a>. The source code is licensed
+                <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons</a>.
+            </p>
+            <p>
+                <a class="icon" href="https://github.com/dereknutile/teamname-generator">
+                    <i class="fa fa-github"></i>
+                </a>
+            </p>
+        </div>
+    </div>
+</footer>
 
     <script>
         var apiURL = 'https://raw.githubusercontent.com/dereknutile/teamname-generator/master/teams.json';
         var app = new Vue({
             el: '#app',
             data: {
-                message: 'Teamname Generator',
                 teamNames: [], // get from remote json
                 randomName: "Random Team Name"
             },
