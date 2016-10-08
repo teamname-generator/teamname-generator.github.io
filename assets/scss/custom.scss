@@ -1,0 +1,41 @@
+/*
+Use this sass command to create a clean, compact, and readable stylesheet.
+sass assets/scss/custom.scss:assets/css/custom.css --style compact
+
+Use this sass command to create a minified stylesheet.
+sass assets/scss/custom.scss:assets/css/custom.min.css --style compressed
+*/
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* fonts
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* common or base font */
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300,700|Abel);
+$fontBasePrimary: 'Abel', Helvetica, Arial, sans-serif;
+
+/* secondary or print font */
+@import url(https://fonts.googleapis.com/css?family=Bitter:400,400italic,700);
+$fontPrintPrimary: 'Bitter', Times, serif;
+
+/* font for script, cursive, or fancy rendering */
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+$fontFancyPrimary: 'Pacifico';
+
+/* technical, typewriter, monospace font typically used for pre or code tags */
+@import url(http://fonts.googleapis.com/css?family=Inconsolata);
+$fontMonoPrimary: 'Inconsolata', Courier, monospace;
+
+
+// Override initial variables here
+// You can add new ones or update existing ones:
+
+$blue: #72d0eb;
+$pink: #ffb3b3;
+$family-serif: $fontPrintPrimary;
+$family-primary: $family-serif;
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* import Bulma after all variables are set
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+@import "../vendor/bulma/css/bulma.css"

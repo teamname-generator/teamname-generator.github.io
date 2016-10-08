@@ -1,0 +1,24 @@
+/*
+Use this sass command to create a clean, compact, and readable stylesheet.
+sass assets/scss/custom.scss:assets/css/custom.css --style compact
+
+Use this sass command to create a minified stylesheet.
+sass assets/scss/custom.scss:assets/css/custom.min.css --style compressed
+*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* fonts
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* common or base font */
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300,700|Abel);
+/* secondary or print font */
+@import url(https://fonts.googleapis.com/css?family=Bitter:400,400italic,700);
+/* font for script, cursive, or fancy rendering */
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+/* technical, typewriter, monospace font typically used for pre or code tags */
+@import url(http://fonts.googleapis.com/css?family=Inconsolata);
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* import Bulma after all variables are set
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+@import url(../vendor/bulma/css/bulma.css);
+
+/*# sourceMappingURL=custom.css.map */
